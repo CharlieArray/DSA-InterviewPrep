@@ -8,8 +8,7 @@ console.log(stringArray)
 
 function countWords(stringArray){
 
-//use object to store key:value pairs for word:count
- let result = {};
+ let result = {};  //store key:value pairs for word:count
 
     for(let i = 0; i < stringArray.length; i++ ){
 
