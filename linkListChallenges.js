@@ -1,5 +1,58 @@
 //Given a sorted linked list, write an algorithm to delete all duplicate numbers from the sorted linked list.
 
+const list = {
+    head: {
+        value: 2 ,
+        next:{
+            value: 4,
+            next:{
+                value:6,
+                next:{
+                    value: 6,
+                    next: {
+                        value: 8,
+                        next: null
+                    }
+                }
+            }
+        }
+    }
+};
+
+function deleteDuplicate(list){
+    if(list == null){
+        return null
+    }
+
+    let current = list.head;
+
+    while(current && current.next){
+        if(current.value == current.next.value){
+             current.next = current.next.next
+        }
+        current = current.next
+        console.log(list)
+    }
+    // console.log(list)
+    return list
+}
+
+function display(list){
+    let node = list.head
+    while(node){
+        console.log(node.value)
+        node = node.next
+    }
+}
+display(list)
+deleteDuplicate(list)
+display(list)
+
+// 2 -> 4 -> 6a -> 6b -> 8
+//if current == current.next , set current.next = previous.next, then change the pointer
+// 4 is previous, 6a is current, 6b is current.next
+
+
 /*
 const list = {
     head: {

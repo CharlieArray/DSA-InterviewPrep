@@ -1,11 +1,28 @@
 // Filtering an array
 
 // Imagine you have an array of numbers. Write an algorithm to remove all numbers less than 5 from the array. DO NOT use Array's built-in .filter() method here; write the algorithm from scratch.
+
+let array = [2,4,5,7,9,12,14]
+
+function removeUnder5(){
+    let arrOver5 = [];
+
+    for(let i=0; i < array.length; i++){
+        if(array[i] > 5) {arrOver5.push(array[i])}
+    }
+    array = arrOver5;
+    console.log(array)
+}
+
+removeUnder5(array)
+
+
 // 7. Max sum in the array
 // You are given an array containing positive and negative integers. Write an algorithm which will find the largest sum in a continuous sequence.
     
 //     Input: [4, 6, -3, 5, -2, 1]
 //     Output: 12
+
 
 // 8. Merge arrays
 // Imagine you have 2 arrays which have already been sorted. Write an algorithm to merge the 2 arrays into a single array, which should also be sorted.
@@ -14,12 +31,21 @@
 //     Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
 
 
+
+
+
+
 // 9. Remove characters
 // Write an algorithm that deletes given characters from a string. For example, given a string of "Battle of the Vowels: Hawaii vs. Grozny" and the characters to be removed are "aeiou", the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny". Do not use Javascript's filter, split, or join methods.
 
 //     Input:'Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'
 //     Output: 'Bttl f th Vwls: Hw vs. Grzny'
 
+let chars= "aeiou"
+
+for(let i=0; i< chars.length; i++){
+
+}
 
 // 10. Products
 
