@@ -48,17 +48,6 @@ function returnPaindromes(){
 
 returnPaindromes(string)
 
-
-
-
-
-
-
-
-
-
-
-
 // 7. Max sum in the array
 // You are given an array containing positive and negative integers. Write an algorithm which will find the largest sum in a continuous sequence.
     
