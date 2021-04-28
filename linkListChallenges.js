@@ -19,6 +19,7 @@ const list = {
     }
 };
 
+
 function deleteDuplicate(list){
     if(list == null){
         return null

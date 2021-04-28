@@ -11,10 +11,52 @@ function removeUnder5(){
         if(array[i] > 5) {arrOver5.push(array[i])}
     }
     array = arrOver5;
-    console.log(array)
+    console.log(array, "<- nums that are less than 5")
 }
 
 removeUnder5(array)
+
+
+//Given an input string, return a list of all words that are Palindromes   
+let string =  "Dad gave mom a Tesla as a racecar"
+
+
+function returnPaindromes(){
+    //have a placeholder var for list; result = []
+        let resultsThatMatch = []
+
+    //break up entire string into array 
+        let arrayString = string.toLowerCase().split("")
+        let origStringArr = arrayString.join("").split(" ")
+
+    //iterate through each array index and reverse word -> ["dad, evag, mom, a, alset, sa, a , racecar"]
+    let reverStringArr = arrayString.reverse().join("").split(" ")
+
+    //if reversed word index matches original index item, push word to resultsMatch
+    for(let i = 0; i < origStringArr.length; i++){
+
+        for(let j = 0; j < reverStringArr.length; j++)
+            if(origStringArr[i] === reverStringArr[j]){
+                resultsThatMatch.push(origStringArr[i])
+            }
+    }
+
+    //return resultsMatch, and let qty = resultsMatch.length
+    console.log(resultsThatMatch, "these matched")
+    console.log(`Number of Palidromes is ${resultsThatMatch.length}`)
+}
+
+returnPaindromes(string)
+
+
+
+
+
+
+
+
+
+
 
 
 // 7. Max sum in the array
@@ -30,22 +72,11 @@ removeUnder5(array)
 //     Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
 //     Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
 
-
-
-
-
-
 // 9. Remove characters
 // Write an algorithm that deletes given characters from a string. For example, given a string of "Battle of the Vowels: Hawaii vs. Grozny" and the characters to be removed are "aeiou", the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny". Do not use Javascript's filter, split, or join methods.
 
-//     Input:'Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'
+// charRemoval = 'Battle of the Vowels: Hawaii vs. Grozny'
 //     Output: 'Bttl f th Vwls: Hw vs. Grzny'
-
-let chars= "aeiou"
-
-for(let i=0; i< chars.length; i++){
-
-}
 
 // 10. Products
 
@@ -64,3 +95,21 @@ for(let i=0; i< chars.length; i++){
 
 //     Input: amazon, azonam
 //     Output: true
+
+
+// Find Maximum in Array
+
+function maxNumber(array) {
+        if (array.length === 0) {
+            return null;
+        }
+    
+        let currentMax = array[0];
+        for (let i = 1; i < array.length; i++) {
+            const item = array[i];
+            if (item > currentMax) {
+                currentMax = item;
+            }
+        }
+        return currentMax;
+    }
