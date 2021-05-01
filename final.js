@@ -58,6 +58,32 @@ function returnPaindromes(){
 returnPaindromes(string)
 
 
+//Given an input string, return a list of all words that are Palindromes   
+let stringAlt =  "Dad gave mom a Tesla as a racecar"
+
+function returnPaindromesAlternate(){
+    let resultsMatch = [];
+
+    //benefit: is there's no joining/reversing
+    const words = stringAlt.split(" ")
+
+    for(let i = 0; i < words.length; i++){
+        const word = words[i]
+        let error = false
+        for(let j = 0; j < word.length/2; i++){
+            if(word[j] !== word[word.length - j - 1]){
+                error = true;
+            }
+        }
+        if (!error){
+            resultsMatch.push(word)
+        }
+    }
+    return resultsMatch
+}
+
+returnPaindromes(stringAlt)
+
 //Given a sorted linked list, write an algorithm to delete all duplicate numbers from the sorted linked list.
 
 const linkedList= {
@@ -106,3 +132,50 @@ function display(linkedList){
 display(linkedList)
 deleteDuplicate(linkedList)
 display(linkedList)
+
+/* Primary Linked List operations are 
+
+insert: 
+//insert beginning
+    -
+    -
+    -
+    -
+//insert middle
+
+//insert end
+
+
+delete:
+
+
+
+and get(find)
+
+
+*/
+
+
+// function findItem(item){
+    //set currentNode = this.head
+
+    //check to see if list is empty
+    /*if (!this.head){
+      return null  
+    }
+    */
+
+    /*while(currentNode !== item){
+        
+        if(currentNode.next == null){
+            return null
+        }
+
+        else currentNode = currentNode.next
+    }
+
+    return currentNode
+    */
+
+
+//}

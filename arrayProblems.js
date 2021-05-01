@@ -25,21 +25,23 @@ function returnPaindromes(){
     //have a placeholder var for list; result = []
         let resultsThatMatch = []
 
-    //break up entire string into array 
+    //break up entire string into array; split O(n)
         let arrayString = string.toLowerCase().split("")
         let origStringArr = arrayString.join("").split(" ")
 
     //iterate through each array index and reverse word -> ["dad, evag, mom, a, alset, sa, a , racecar"]
     let reverStringArr = arrayString.reverse().join("").split(" ")
-
+    console.log(origStringArr)
+    console.log(reverStringArr)
     //if reversed word index matches original index item, push word to resultsMatch
-    for(let i = 0; i < origStringArr.length; i++){
-
-        for(let j = 0; j < reverStringArr.length; j++)
-            if(origStringArr[i] === reverStringArr[j]){
-                resultsThatMatch.push(origStringArr[i])
-            }
+    for(let i = 0; i < origStringArr.length ; i++){
+        const j = origStringArr.length - i - 1
+        // for(let j = 0; j < reverStringArr.length; j++)
+             if(origStringArr[i].length > 2 && origStringArr[i] === reverStringArr[j]){
+                 resultsThatMatch.push(origStringArr[i])
+             }
     }
+    
 
     //return resultsMatch, and let qty = resultsMatch.length
     console.log(resultsThatMatch, "these matched")
