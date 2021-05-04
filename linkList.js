@@ -32,31 +32,32 @@ class LinkedList{
         }
     }
 
+    
     find(item) { 
         // Start at the head
-        let currNode = this.head;
-
+        let current = this.head;
+        
         // If the list is empty
         if (!this.head) {
             return null;
         }
-
         // Check for the item 
-        while (currNode.value !== item) {
+        while (current.value !== item) {
             /* Return null if it's the end of the list 
-                and the item is not on the list */
-            if (currNode.next === null) {
+               and the item is not on the list */
+            if (current.next === null) {
                 return null;
             }
             else {
                 // Otherwise, keep looking 
-                currNode = currNode.next;
+                current = current.next;
             }
         }
-
         // Found it
-        return currNode;
+        console.log("found item:", current)
+        return current;
     }
+
 
     remove(item){ 
         // If the list is empty
@@ -92,6 +93,7 @@ let List = new LinkedList()
 
 List.insertFirst(4)
 List.insertLast(8)
+List.find(8, "found item")
 
 console.log(List)
 
