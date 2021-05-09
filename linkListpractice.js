@@ -16,7 +16,7 @@ class LinkedList{
     //insert at beginning
     insertBeginning(value){
 
-        this.head = new _Node(value, null)
+        this.head = new _Node(value, this.head)
     
     // Inserting at the beginning of the list can be achieved by the following steps:
 

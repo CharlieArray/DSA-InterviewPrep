@@ -1,3 +1,5 @@
+//objective: count reoccuring words and return a list of words and count for each.
+
 let string = "Hello there, how are you? Can you tell me how to get to the nearest Starbucks?"
 
 let newString = string.toLowerCase()
@@ -22,3 +24,5 @@ function countWords(stringArray){
 }
 
 countWords(stringArray)
+
+//types of big O: O(1)constant, O(n)linear, O(log n), O(n^2), 

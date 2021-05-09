@@ -16,7 +16,7 @@ let linkedList = {
 
 
 class _Node{
-    constructor(value){
+    constructor(value, next){
       this.value = value;
       this.next = next;
     }
@@ -30,9 +30,7 @@ class LinkedList{
 //insert at begining of linked list
  insertBeginning(value){
     //points head to new node
-    let current = this.head
-
-    current = _Node(value)
+    this.head = new _Node(value, this.head)
        
  }
 
@@ -57,3 +55,8 @@ insertAtEnd(value){
 
 
 }
+
+let newLinkedList = new LinkedList()
+newLinkedList.insertBeginning(4)
+newLinkedList.insertBeginning(6)
+console.log(newLinkedList)
